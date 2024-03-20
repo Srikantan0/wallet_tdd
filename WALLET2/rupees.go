@@ -2,7 +2,6 @@ package wallet2
 
 import (
 	"errors"
-	//"fmt"
 )
 
 var errNegativeOrZeroCredit = errors.New("value is greater than 1 USD")
