@@ -38,5 +38,6 @@ func (w *Wallet) DebitFromAccount(t token) error {
 		return errDebitMoreThanBalanceOrNegativeDebit
 	}
 	w.balance.amt -= t.amt * float64(ConvertOneTypeToAnother(t.curr, w.balance.curr))
+	w.balance.amt = 0
 	return nil
 }
